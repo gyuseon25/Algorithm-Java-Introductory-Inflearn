@@ -20,7 +20,6 @@ public class Least_Recently_Used {
                 deque.addFirst(i);
             }
         }
-
         return deque;
     }
 
