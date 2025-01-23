@@ -4,17 +4,21 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class 이분검색 {
-    public static void solution(int n, int m, int[] arr) {
+    public static int solution(int n, int m, int[] arr) {
 
+        int answer = 0;
         Arrays.sort(arr);
-        int idx = 0;
-        for(int i = 0; i < n; i++) {
-            if(arr[i] == m) {
-                idx = i + 1;
+        int lt = 0, rt = n-1;
+        while(lt <= rt) {
+            int mid = (lt + rt) / 2;
+            if(arr[mid] == m) {
+                answer = mid + 1;
                 break;
-                }
+            }
+            else if(arr[mid] > m) rt = mid -1;
+            else lt = mid + 1;
         }
-        System.out.print(idx);
+        return answer;
     }
 
 
@@ -29,6 +33,6 @@ public class 이분검색 {
             arr[i] = scanner.nextInt();
         }
 
-        solution(n, m, arr);
+        System.out.print(solution(n, m, arr));
     }
 }
