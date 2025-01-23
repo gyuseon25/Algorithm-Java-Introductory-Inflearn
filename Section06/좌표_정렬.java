@@ -4,16 +4,18 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class 좌표_정렬 {
-    static class Position {
-        int x;
-        int y;
-        public Position(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
+class Position {
+    int x;
+    int y;
+    public Position(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
+
+}
+
+public class 좌표_정렬 {
+
     public static Position[] solution(int n, Position[] arr) {
 
         Arrays.sort(arr, new Comparator<Position>() {
