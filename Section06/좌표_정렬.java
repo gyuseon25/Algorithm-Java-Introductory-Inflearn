@@ -13,17 +13,6 @@ public class 좌표_정렬 {
             this.y = y;
         }
 
-        public int compareTo(Position p) {
-            if(this.x > p.x)
-                return  1;
-            else if(this.x == p.x){
-                if(this.y > p.y)
-                    return 1;
-                else
-                    return -1;
-            } else
-                return -1;
-        }
     }
     public static Position[] solution(int n, Position[] arr) {
 
