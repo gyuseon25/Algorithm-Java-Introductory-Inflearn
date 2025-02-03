@@ -8,6 +8,7 @@ public class 바둑이_승차_DFS {
     static int answer = 0, c, n;
 
     public void DFS(int idx, int sum) {
+        if(sum > c) return;
         if(idx == n) {
             if(sum <= c) {
                 answer = Math.max(answer, sum);
