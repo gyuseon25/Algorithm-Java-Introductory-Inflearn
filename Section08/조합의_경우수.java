@@ -4,7 +4,7 @@ import java.util.*;
 
 public class 조합의_경우수 {
 
-    int[][] dy;
+    static int[][] dy;
 
     public int combination(int n, int r) {
         int answer = 0;
