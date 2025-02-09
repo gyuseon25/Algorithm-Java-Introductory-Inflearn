@@ -28,22 +28,22 @@ public class 토마토 {
         checkFlag = true;
     }
 
-    public void BFS(ArrayList<Point> starts) {
-        Queue<Point> q = new LinkedList<>();
-        for(Point p : starts) {
+    public void BFS(ArrayList<Point_14> starts) {
+        Queue<Point_14> q = new LinkedList<>();
+        for(Point_14 p : starts) {
             q.add(p);
         }
 
         while(!q.isEmpty()) {
             int len = q.size();
             for(int i = 0; i < len; i++) {
-                Point tmp = q.poll();
+                Point_14 tmp = q.poll();
                 for(int j = 0; j < 4; j++) {
                     int nx = tmp.x + dx[j];
                     int ny = tmp.y + dy[j];
                     if(nx >= 0 && nx < n && ny >= 0 && ny < m && arr[nx][ny] == 0) {
                         arr[nx][ny] = 1;
-                        q.offer(new Point(nx, ny));
+                        q.offer(new Point_14(nx, ny));
                     }
                 }
             }
@@ -62,13 +62,13 @@ public class 토마토 {
         n = scanner.nextInt();
 
         arr = new int[n][m];
-        ArrayList<Point> starts = new ArrayList<>();
+        ArrayList<Point_14> starts = new ArrayList<>();
 
         for(int x = 0; x < n; x++) {
             for(int y = 0 ; y < m ; y++) {
                 arr[x][y] = scanner.nextInt();
                 if(arr[x][y] == 0) flag = true;
-                if(arr[x][y] == 1) starts.add(new Point(x, y));
+                if(arr[x][y] == 1) starts.add(new Point_14(x, y));
             }
         }
 
