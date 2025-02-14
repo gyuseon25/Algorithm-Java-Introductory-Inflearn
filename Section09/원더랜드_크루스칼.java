@@ -37,7 +37,6 @@ public class 원더랜드_크루스칼 {
         int answer = 0;
         int cnt = 0;
 
-        while(cnt != v-1) {
             for(Edge_7 e : arr) {
                 int fa = find(e.a);
                 int fb = find(e.b);
@@ -46,8 +45,10 @@ public class 원더랜드_크루스칼 {
                     answer += e.c;
                     cnt++;
                 }
+                if(cnt == v-1)
+                    break;
             }
-        }
+
 
         return answer;
     }
