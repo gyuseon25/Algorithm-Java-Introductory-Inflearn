@@ -10,9 +10,9 @@ public class 최대_부분_증가수열 {
         int answer = 0;
         dp = new int[arr.length];
         dp[0] = 1;
-        for(int i=1; i<arr.length; i++){
+        for(int i = 1; i < arr.length; i++){
             int max=0;
-            for(int j=i-1; j>=0; j--){
+            for(int j = i - 1; j >= 0; j--){
                 if(arr[j] < arr[i] && dp[j] > max) max = dp[j];
             }
             dp[i] = max + 1;
